@@ -169,26 +169,6 @@
 
     
   <url>
-    <loc>http://www.flonger.top/2017/08/14/Android%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2018-08-29T10:09:29.000Z</lastmod>
-    <data>
-        <display>
-        <title>Android开发遇到的问题</title>
-        <pubTime>2017-08-14T02:40:59.000Z</pubTime>
-        
-        <tag>Android</tag>
-         
-         
-           
-             
-              <breadCrumb title="Android" url="http://www.flonger.top/categories/Android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.flonger.top/2017/07/12/Ciao-Tomorrow/</loc>
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     <data>
@@ -202,6 +182,26 @@
            
              
               <breadCrumb title="逼哥" url="http://www.flonger.top/categories/%E9%80%BC%E5%93%A5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.flonger.top/2017/08/14/Android%E5%BC%80%E5%8F%91%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2018-08-29T10:09:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>Android开发遇到的问题</title>
+        <pubTime>2017-08-14T02:40:59.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.flonger.top/categories/Android/"/>
           
         </display>
     </data>
