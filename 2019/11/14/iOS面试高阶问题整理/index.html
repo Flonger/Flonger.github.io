@@ -122,25 +122,25 @@
 
 
 
-  <meta name="description" content="GCD中的dispatch_apply的用法及作用1.  dispatch_apply的基本用法 官方文档：Submits a block to a dispatch queue for parallel invocation. This function waits for the task block to complete before returning. If the specified">
-<meta name="keywords" content="GCD">
+  <meta name="description" content="iOS面试高阶问题整理1.UI视图的事件传递机制是如何实现的？2.UI绘制原理是怎样的？3.请利用TableView的重用机制实现一个字母索引条。4.什么是离屏渲染？5.什么是ARC? （可能有很多同学还不清楚ARC是编译器和Runtime的协作结果）6.AutoReleasePool的实现机制。（总结一句话：是以栈为结点构成的双向链表结构。）7.循环引用相关的考察，NSTimer如果重复调用怎样">
+<meta name="keywords" content="iOS,面试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GCD学习：dispatch_apply">
-<meta property="og:url" content="http://blog.flonger.com/2016/08/16/GCD学习：dispatch-apply/index.html">
+<meta property="og:title" content="iOS面试高阶问题整理">
+<meta property="og:url" content="http://blog.flonger.com/2019/11/14/iOS面试高阶问题整理/index.html">
 <meta property="og:site_name" content="Flonger&#39;s Blog">
-<meta property="og:description" content="GCD中的dispatch_apply的用法及作用1.  dispatch_apply的基本用法 官方文档：Submits a block to a dispatch queue for parallel invocation. This function waits for the task block to complete before returning. If the specified">
+<meta property="og:description" content="iOS面试高阶问题整理1.UI视图的事件传递机制是如何实现的？2.UI绘制原理是怎样的？3.请利用TableView的重用机制实现一个字母索引条。4.什么是离屏渲染？5.什么是ARC? （可能有很多同学还不清楚ARC是编译器和Runtime的协作结果）6.AutoReleasePool的实现机制。（总结一句话：是以栈为结点构成的双向链表结构。）7.循环引用相关的考察，NSTimer如果重复调用怎样">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-29T10:09:29.000Z">
+<meta property="og:updated_time" content="2019-11-14T02:15:57.681Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GCD学习：dispatch_apply">
-<meta name="twitter:description" content="GCD中的dispatch_apply的用法及作用1.  dispatch_apply的基本用法 官方文档：Submits a block to a dispatch queue for parallel invocation. This function waits for the task block to complete before returning. If the specified">
+<meta name="twitter:title" content="iOS面试高阶问题整理">
+<meta name="twitter:description" content="iOS面试高阶问题整理1.UI视图的事件传递机制是如何实现的？2.UI绘制原理是怎样的？3.请利用TableView的重用机制实现一个字母索引条。4.什么是离屏渲染？5.什么是ARC? （可能有很多同学还不清楚ARC是编译器和Runtime的协作结果）6.AutoReleasePool的实现机制。（总结一句话：是以栈为结点构成的双向链表结构。）7.循环引用相关的考察，NSTimer如果重复调用怎样">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.flonger.com/2016/08/16/GCD学习：dispatch-apply/"/>
+  <link rel="canonical" href="http://blog.flonger.com/2019/11/14/iOS面试高阶问题整理/"/>
 
 
 
@@ -150,7 +150,7 @@
   };
 </script>
 
-  <title>GCD学习：dispatch_apply | Flonger's Blog</title>
+  <title>iOS面试高阶问题整理 | Flonger's Blog</title>
   
 
 
@@ -318,7 +318,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.flonger.com/2016/08/16/GCD学习：dispatch-apply/">
+    <link itemprop="mainEntityOfPage" href="http://blog.flonger.com/2019/11/14/iOS面试高阶问题整理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Flonger">
@@ -335,7 +335,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">GCD学习：dispatch_apply
+          <h1 class="post-title" itemprop="name headline">iOS面试高阶问题整理
               
             
           </h1>
@@ -360,24 +360,12 @@
                 
               
 
-              <time title="创建时间：2016-08-16 10:54:08" itemprop="dateCreated datePublished" datetime="2016-08-16T10:54:08+08:00">2016-08-16</time>
+              <time title="创建时间：2019-11-14 10:11:11 / 修改时间：10:15:57" itemprop="dateCreated datePublished" datetime="2019-11-14T10:11:11+08:00">2019-11-14</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-08-29 18:09:29" itemprop="dateModified" datetime="2018-08-29T18:09:29+08:00">2018-08-29</time>
               
             
           </span>
@@ -394,7 +382,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/GCD/" itemprop="url" rel="index"><span itemprop="name">GCD</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/iOS知识小集/" itemprop="url" rel="index"><span itemprop="name">iOS知识小集</span></a></span>
 
                 
                 
@@ -436,15 +424,7 @@
       
 
       
-        <h1 id="GCD中的dispatch-apply的用法及作用"><a href="#GCD中的dispatch-apply的用法及作用" class="headerlink" title="GCD中的dispatch_apply的用法及作用"></a>GCD中的dispatch_apply的用法及作用</h1><h4 id="1-dispatch-apply的基本用法"><a href="#1-dispatch-apply的基本用法" class="headerlink" title="1.  dispatch_apply的基本用法"></a>1.  dispatch_apply的基本用法</h4><blockquote>
-<p>官方文档：<br>Submits a block to a dispatch queue for parallel invocation. This function waits for the task block to complete before returning. If the specified queue is concurrent, the block may be invoked concurrently, and it must therefore be reentrant safe.<br>意思是dispatch_apply函数是dispatch_sync函数和Dispatch Group的关联API,该函数按指定的次数将指定的Block追加到指定的Dispatch Queue中,并等到全部的处理执行结束</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">void dispatch_apply(size_t iterations, dispatch_queue_t queue,DISPATCH_NOESCAPE void (^block)(size_t));</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>其中:<br>iterations，要执行的迭代次数。<br>queue，提交块的调度队列，要传递的首选值是DISPATCH_APPLY_AUTO，以便自动使用适合调用线程的队列。<br>block，要调用的块的迭代次数指定，为了按执行顺序区分各个Block。</p>
-</blockquote>
-<h4 id="2-dispatch-apply使用"><a href="#2-dispatch-apply使用" class="headerlink" title="2. dispatch_apply使用"></a>2. dispatch_apply使用</h4><p>（一）实现for循环<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">- (void)test&#123;</span><br><span class="line">    NSArray *array = @[@&quot;1&quot;,@&quot;2&quot;,@&quot;3&quot;,@&quot;4&quot;,@&quot;5&quot;,@&quot;6&quot;,@&quot;7&quot;,@&quot;8&quot;,@&quot;9&quot;,@&quot;10&quot;];</span><br><span class="line">    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);</span><br><span class="line">    dispatch_apply(array.count, queue, ^(size_t index) &#123;</span><br><span class="line">        NSLog(@&quot;%zu:%@&quot;,index,array[index]);</span><br><span class="line">    &#125;);</span><br><span class="line">    NSLog(@&quot;over&quot;);</span><br><span class="line">    /*</span><br><span class="line">     输出结果:</span><br><span class="line">     [83613:5550032] 0:1</span><br><span class="line">     [83613:5550032] 1:2</span><br><span class="line">     [83613:5550032] 2:3</span><br><span class="line">     [83613:5550131] 4:5</span><br><span class="line">     [83613:5550032] 3:4</span><br><span class="line">     [83613:5550131] 5:6</span><br><span class="line">     [83613:5550131] 6:7</span><br><span class="line">     [83613:5550131] 8:9</span><br><span class="line">     [83613:5550131] 9:10</span><br><span class="line">     [83613:5550136] 7:8</span><br><span class="line">     [83613:5550032] over</span><br><span class="line"></span><br><span class="line">     因为dispatch_apply是在global_queue中执行，所以每个处理的时间不确定，但是over肯定是最后执行，因为dispatch_apply会等待所有的处理结果</span><br><span class="line"></span><br><span class="line">     */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="3-在dispatch-async中异步执行dispatch-apply，模拟同步效果"><a href="#3-在dispatch-async中异步执行dispatch-apply，模拟同步效果" class="headerlink" title="3.在dispatch_async中异步执行dispatch_apply，模拟同步效果"></a>3.在dispatch_async中异步执行dispatch_apply，模拟同步效果</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">- (void)test&#123;</span><br><span class="line">    NSArray *array = @[@&quot;1&quot;,@&quot;2&quot;,@&quot;3&quot;,@&quot;4&quot;,@&quot;5&quot;,@&quot;6&quot;,@&quot;7&quot;,@&quot;8&quot;,@&quot;9&quot;,@&quot;10&quot;];</span><br><span class="line">    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);</span><br><span class="line"></span><br><span class="line">    dispatch_async(queue, ^&#123;</span><br><span class="line">        dispatch_apply(array.count, queue, ^(size_t index) &#123;</span><br><span class="line">            NSLog(@&quot;%zu:%@&quot;,index,array[index]);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            NSLog(@&quot;over,回调主线程&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">     输出结果:</span><br><span class="line">     [83665:5553219] 0:1</span><br><span class="line">     [83665:5553219] 1:2</span><br><span class="line">     [83665:5553219] 3:4</span><br><span class="line">     [83665:5553219] 4:5</span><br><span class="line">     [83665:5553219] 5:6</span><br><span class="line">     [83665:5553219] 6:7</span><br><span class="line">     [83665:5553219] 7:8</span><br><span class="line">     [83665:5553219] 8:9</span><br><span class="line">     [83665:5553219] 9:10</span><br><span class="line">     [83665:5553223] 2:3</span><br><span class="line">     [83665:5553137] over,回调主线程</span><br><span class="line"></span><br><span class="line">     */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="iOS面试高阶问题整理"><a href="#iOS面试高阶问题整理" class="headerlink" title="iOS面试高阶问题整理"></a>iOS面试高阶问题整理</h2><h4 id="1-UI视图的事件传递机制是如何实现的？"><a href="#1-UI视图的事件传递机制是如何实现的？" class="headerlink" title="1.UI视图的事件传递机制是如何实现的？"></a>1.UI视图的事件传递机制是如何实现的？</h4><h4 id="2-UI绘制原理是怎样的？"><a href="#2-UI绘制原理是怎样的？" class="headerlink" title="2.UI绘制原理是怎样的？"></a>2.UI绘制原理是怎样的？</h4><h4 id="3-请利用TableView的重用机制实现一个字母索引条。"><a href="#3-请利用TableView的重用机制实现一个字母索引条。" class="headerlink" title="3.请利用TableView的重用机制实现一个字母索引条。"></a>3.请利用TableView的重用机制实现一个字母索引条。</h4><h4 id="4-什么是离屏渲染？"><a href="#4-什么是离屏渲染？" class="headerlink" title="4.什么是离屏渲染？"></a>4.什么是离屏渲染？</h4><h4 id="5-什么是ARC-（可能有很多同学还不清楚ARC是编译器和Runtime的协作结果）"><a href="#5-什么是ARC-（可能有很多同学还不清楚ARC是编译器和Runtime的协作结果）" class="headerlink" title="5.什么是ARC? （可能有很多同学还不清楚ARC是编译器和Runtime的协作结果）"></a>5.什么是ARC? （可能有很多同学还不清楚ARC是编译器和Runtime的协作结果）</h4><h4 id="6-AutoReleasePool的实现机制。（总结一句话：是以栈为结点构成的双向链表结构。）"><a href="#6-AutoReleasePool的实现机制。（总结一句话：是以栈为结点构成的双向链表结构。）" class="headerlink" title="6.AutoReleasePool的实现机制。（总结一句话：是以栈为结点构成的双向链表结构。）"></a>6.AutoReleasePool的实现机制。（总结一句话：是以栈为结点构成的双向链表结构。）</h4><h4 id="7-循环引用相关的考察，NSTimer如果重复调用怎样解除循环引用？"><a href="#7-循环引用相关的考察，NSTimer如果重复调用怎样解除循环引用？" class="headerlink" title="7.循环引用相关的考察，NSTimer如果重复调用怎样解除循环引用？"></a>7.循环引用相关的考察，NSTimer如果重复调用怎样解除循环引用？</h4><h4 id="8-block关键字是否可以解决循环引用？"><a href="#8-block关键字是否可以解决循环引用？" class="headerlink" title="8.__block关键字是否可以解决循环引用？"></a>8.__block关键字是否可以解决循环引用？</h4><h4 id="9-Block的本质是什么"><a href="#9-Block的本质是什么" class="headerlink" title="9.Block的本质是什么?"></a>9.Block的本质是什么?</h4><h4 id="10-Block的截获变量的特性应该怎样解释，Block是怎样产生循环引用的？"><a href="#10-Block的截获变量的特性应该怎样解释，Block是怎样产生循环引用的？" class="headerlink" title="10.Block的截获变量的特性应该怎样解释，Block是怎样产生循环引用的？"></a>10.Block的截获变量的特性应该怎样解释，Block是怎样产生循环引用的？</h4><h4 id="11-怎样利用iOS的多线程技术对共享变量实现多读单写操作呢？"><a href="#11-怎样利用iOS的多线程技术对共享变量实现多读单写操作呢？" class="headerlink" title="11.怎样利用iOS的多线程技术对共享变量实现多读单写操作呢？"></a>11.怎样利用iOS的多线程技术对共享变量实现多读单写操作呢？</h4><h4 id="12-怎样理解自旋锁？-递归锁应该怎样使用？"><a href="#12-怎样理解自旋锁？-递归锁应该怎样使用？" class="headerlink" title="12.怎样理解自旋锁？ 递归锁应该怎样使用？"></a>12.怎样理解自旋锁？ 递归锁应该怎样使用？</h4><h4 id="13-常见的线程同步问题该怎样解决？"><a href="#13-常见的线程同步问题该怎样解决？" class="headerlink" title="13.常见的线程同步问题该怎样解决？"></a>13.常见的线程同步问题该怎样解决？</h4><h4 id="14-怎样解决DNS劫持？"><a href="#14-怎样解决DNS劫持？" class="headerlink" title="14.怎样解决DNS劫持？"></a>14.怎样解决DNS劫持？</h4><h4 id="15-TCP的慢启动特点是怎样的。"><a href="#15-TCP的慢启动特点是怎样的。" class="headerlink" title="15.TCP的慢启动特点是怎样的。"></a>15.TCP的慢启动特点是怎样的。</h4><h4 id="16-你对HTTPS是怎样理解的？"><a href="#16-你对HTTPS是怎样理解的？" class="headerlink" title="16.你对HTTPS是怎样理解的？"></a>16.你对HTTPS是怎样理解的？</h4><h4 id="17-给你一个实际场景，让大家现场提出利用哪个设计模式解决实际问题。"><a href="#17-给你一个实际场景，让大家现场提出利用哪个设计模式解决实际问题。" class="headerlink" title="17.给你一个实际场景，让大家现场提出利用哪个设计模式解决实际问题。"></a>17.给你一个实际场景，让大家现场提出利用哪个设计模式解决实际问题。</h4><h4 id="18-怎样设计一个时长统计框架？"><a href="#18-怎样设计一个时长统计框架？" class="headerlink" title="18.怎样设计一个时长统计框架？"></a>18.怎样设计一个时长统计框架？</h4><h4 id="19-怎样设计一个图片缓存框架？"><a href="#19-怎样设计一个图片缓存框架？" class="headerlink" title="19.怎样设计一个图片缓存框架？"></a>19.怎样设计一个图片缓存框架？</h4><h4 id="20-客户端的整体架构实现是怎样的，解耦方式都有哪些？"><a href="#20-客户端的整体架构实现是怎样的，解耦方式都有哪些？" class="headerlink" title="20.客户端的整体架构实现是怎样的，解耦方式都有哪些？"></a>20.客户端的整体架构实现是怎样的，解耦方式都有哪些？</h4><h4 id="21-UIView和CALayer之间的关系是怎样的？请从设计原则的角度回答系统为何这样设计？"><a href="#21-UIView和CALayer之间的关系是怎样的？请从设计原则的角度回答系统为何这样设计？" class="headerlink" title="21.UIView和CALayer之间的关系是怎样的？请从设计原则的角度回答系统为何这样设计？"></a>21.UIView和CALayer之间的关系是怎样的？请从设计原则的角度回答系统为何这样设计？</h4><h4 id="22-UI卡顿、掉帧的原理是怎样的？"><a href="#22-UI卡顿、掉帧的原理是怎样的？" class="headerlink" title="22.UI卡顿、掉帧的原理是怎样的？"></a>22.UI卡顿、掉帧的原理是怎样的？</h4><h4 id="23-请解释一下你对isa指针的理解。"><a href="#23-请解释一下你对isa指针的理解。" class="headerlink" title="23.请解释一下你对isa指针的理解。"></a>23.请解释一下你对isa指针的理解。</h4><h4 id="24-你是怎样理解引用计数机制的？（很多人会说什么retain-release-dealloc，完全没有Get到面试官的考察意图）"><a href="#24-你是怎样理解引用计数机制的？（很多人会说什么retain-release-dealloc，完全没有Get到面试官的考察意图）" class="headerlink" title="24.你是怎样理解引用计数机制的？（很多人会说什么retain\release\dealloc，完全没有Get到面试官的考察意图）"></a>24.你是怎样理解引用计数机制的？（很多人会说什么retain\release\dealloc，完全没有Get到面试官的考察意图）</h4>
       
     </div>
 
@@ -462,12 +442,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2016/08/16/GCD学习：dispatch-apply/">GCD学习：dispatch_apply</a></p>
+  <p><span>本文标题:</span><a href="/2019/11/14/iOS面试高阶问题整理/">iOS面试高阶问题整理</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Flonger 的个人博客">Flonger</a></p>
-  <p><span>发布时间:</span>2016年08月16日 - 10:08</p>
-  <p><span>最后更新:</span>2018年08月29日 - 18:08</p>
-  <p><span>原始链接:</span><a href="/2016/08/16/GCD学习：dispatch-apply/" title="GCD学习：dispatch_apply">http://blog.flonger.com/2016/08/16/GCD学习：dispatch-apply/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blog.flonger.com/2016/08/16/GCD学习：dispatch-apply/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2019年11月14日 - 10:11</p>
+  <p><span>最后更新:</span>2019年11月14日 - 10:11</p>
+  <p><span>原始链接:</span><a href="/2019/11/14/iOS面试高阶问题整理/" title="iOS面试高阶问题整理">http://blog.flonger.com/2019/11/14/iOS面试高阶问题整理/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blog.flonger.com/2019/11/14/iOS面试高阶问题整理/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
 </div>
@@ -528,7 +508,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/GCD/" rel="tag"><i class="fa fa-tag"></i> GCD</a>
+            <a href="/tags/iOS/" rel="tag"><i class="fa fa-tag"></i> iOS</a>
+          
+            <a href="/tags/面试/" rel="tag"><i class="fa fa-tag"></i> 面试</a>
           
         </div>
       
@@ -541,8 +523,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/23/NSString属性什么时候用copy，什么时候用strong/" rel="next" title="NSString属性什么时候用copy，什么时候用strong?">
-                <i class="fa fa-chevron-left"></i> NSString属性什么时候用copy，什么时候用strong?
+              <a href="/2019/08/23/阶段感悟/" rel="next" title="0908感悟">
+                <i class="fa fa-chevron-left"></i> 0908感悟
               </a>
             
           </div>
@@ -550,10 +532,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/12/Ciao-Tomorrow/" rel="prev" title="你好明天!Ciao Tomorrow!">
-                你好明天!Ciao Tomorrow! <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -784,7 +762,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GCD中的dispatch-apply的用法及作用"><span class="nav-number">1.</span> <span class="nav-text">GCD中的dispatch_apply的用法及作用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-dispatch-apply的基本用法"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">1.  dispatch_apply的基本用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-dispatch-apply使用"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">2. dispatch_apply使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-在dispatch-async中异步执行dispatch-apply，模拟同步效果"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">3.在dispatch_async中异步执行dispatch_apply，模拟同步效果</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS面试高阶问题整理"><span class="nav-number">1.</span> <span class="nav-text">iOS面试高阶问题整理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-UI视图的事件传递机制是如何实现的？"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.UI视图的事件传递机制是如何实现的？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-UI绘制原理是怎样的？"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.UI绘制原理是怎样的？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-请利用TableView的重用机制实现一个字母索引条。"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.请利用TableView的重用机制实现一个字母索引条。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-什么是离屏渲染？"><span class="nav-number">1.0.4.</span> <span class="nav-text">4.什么是离屏渲染？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-什么是ARC-（可能有很多同学还不清楚ARC是编译器和Runtime的协作结果）"><span class="nav-number">1.0.5.</span> <span class="nav-text">5.什么是ARC? （可能有很多同学还不清楚ARC是编译器和Runtime的协作结果）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-AutoReleasePool的实现机制。（总结一句话：是以栈为结点构成的双向链表结构。）"><span class="nav-number">1.0.6.</span> <span class="nav-text">6.AutoReleasePool的实现机制。（总结一句话：是以栈为结点构成的双向链表结构。）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-循环引用相关的考察，NSTimer如果重复调用怎样解除循环引用？"><span class="nav-number">1.0.7.</span> <span class="nav-text">7.循环引用相关的考察，NSTimer如果重复调用怎样解除循环引用？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-block关键字是否可以解决循环引用？"><span class="nav-number">1.0.8.</span> <span class="nav-text">8.__block关键字是否可以解决循环引用？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-Block的本质是什么"><span class="nav-number">1.0.9.</span> <span class="nav-text">9.Block的本质是什么?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-Block的截获变量的特性应该怎样解释，Block是怎样产生循环引用的？"><span class="nav-number">1.0.10.</span> <span class="nav-text">10.Block的截获变量的特性应该怎样解释，Block是怎样产生循环引用的？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-怎样利用iOS的多线程技术对共享变量实现多读单写操作呢？"><span class="nav-number">1.0.11.</span> <span class="nav-text">11.怎样利用iOS的多线程技术对共享变量实现多读单写操作呢？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-怎样理解自旋锁？-递归锁应该怎样使用？"><span class="nav-number">1.0.12.</span> <span class="nav-text">12.怎样理解自旋锁？ 递归锁应该怎样使用？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-常见的线程同步问题该怎样解决？"><span class="nav-number">1.0.13.</span> <span class="nav-text">13.常见的线程同步问题该怎样解决？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#14-怎样解决DNS劫持？"><span class="nav-number">1.0.14.</span> <span class="nav-text">14.怎样解决DNS劫持？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#15-TCP的慢启动特点是怎样的。"><span class="nav-number">1.0.15.</span> <span class="nav-text">15.TCP的慢启动特点是怎样的。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#16-你对HTTPS是怎样理解的？"><span class="nav-number">1.0.16.</span> <span class="nav-text">16.你对HTTPS是怎样理解的？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#17-给你一个实际场景，让大家现场提出利用哪个设计模式解决实际问题。"><span class="nav-number">1.0.17.</span> <span class="nav-text">17.给你一个实际场景，让大家现场提出利用哪个设计模式解决实际问题。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#18-怎样设计一个时长统计框架？"><span class="nav-number">1.0.18.</span> <span class="nav-text">18.怎样设计一个时长统计框架？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#19-怎样设计一个图片缓存框架？"><span class="nav-number">1.0.19.</span> <span class="nav-text">19.怎样设计一个图片缓存框架？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#20-客户端的整体架构实现是怎样的，解耦方式都有哪些？"><span class="nav-number">1.0.20.</span> <span class="nav-text">20.客户端的整体架构实现是怎样的，解耦方式都有哪些？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#21-UIView和CALayer之间的关系是怎样的？请从设计原则的角度回答系统为何这样设计？"><span class="nav-number">1.0.21.</span> <span class="nav-text">21.UIView和CALayer之间的关系是怎样的？请从设计原则的角度回答系统为何这样设计？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#22-UI卡顿、掉帧的原理是怎样的？"><span class="nav-number">1.0.22.</span> <span class="nav-text">22.UI卡顿、掉帧的原理是怎样的？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#23-请解释一下你对isa指针的理解。"><span class="nav-number">1.0.23.</span> <span class="nav-text">23.请解释一下你对isa指针的理解。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#24-你是怎样理解引用计数机制的？（很多人会说什么retain-release-dealloc，完全没有Get到面试官的考察意图）"><span class="nav-number">1.0.24.</span> <span class="nav-text">24.你是怎样理解引用计数机制的？（很多人会说什么retain\release\dealloc，完全没有Get到面试官的考察意图）</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
