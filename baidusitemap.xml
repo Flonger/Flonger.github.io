@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://blog.flonger.com/2019/12/18/Vue%E9%A1%B9%E7%9B%AEcommit%E6%97%B6%E7%9A%84Cli%E6%8A%A5%E9%94%99/</loc>
+    <lastmod>2019-12-18T03:09:17.959Z</lastmod>
+    <data>
+        <display>
+        <title>Vue项目commit时的CLi报错</title>
+        <pubTime>2019-12-18T03:05:52.000Z</pubTime>
+        
+        <tag>VUE</tag>
+         
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="前端开发问题" url="http://blog.flonger.com/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.flonger.com/2019/11/14/iOS%E9%9D%A2%E8%AF%95%E9%AB%98%E9%98%B6%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</loc>
     <lastmod>2019-11-14T02:25:38.667Z</lastmod>
     <data>
@@ -231,12 +253,12 @@
 
     
   <url>
-    <loc>http://blog.flonger.com/2016/07/23/GCD%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
+    <loc>http://blog.flonger.com/2016/08/16/GCD%E5%AD%A6%E4%B9%A0%EF%BC%9Adispatch-apply/</loc>
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     <data>
         <display>
-        <title>GCD学习:概述</title>
-        <pubTime>2016-07-23T13:40:41.000Z</pubTime>
+        <title>GCD学习：dispatch_apply</title>
+        <pubTime>2016-08-16T02:54:08.000Z</pubTime>
         
         <tag>GCD</tag>
          
@@ -251,12 +273,12 @@
 
     
   <url>
-    <loc>http://blog.flonger.com/2016/08/16/GCD%E5%AD%A6%E4%B9%A0%EF%BC%9Adispatch-apply/</loc>
+    <loc>http://blog.flonger.com/2016/07/23/GCD%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     <data>
         <display>
-        <title>GCD学习：dispatch_apply</title>
-        <pubTime>2016-08-16T02:54:08.000Z</pubTime>
+        <title>GCD学习:概述</title>
+        <pubTime>2016-07-23T13:40:41.000Z</pubTime>
         
         <tag>GCD</tag>
          
@@ -385,12 +407,12 @@
 
     
   <url>
-    <loc>http://blog.flonger.com/2018/07/21/%E7%90%B4%E5%BA%90%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/</loc>
+    <loc>http://blog.flonger.com/2018/07/14/%E7%90%B4%E5%BA%90%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/</loc>
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     <data>
         <display>
-        <title>琴庐第二节课</title>
-        <pubTime>2018-07-21T15:45:30.000Z</pubTime>
+        <title>琴庐第一节课</title>
+        <pubTime>2018-07-14T15:44:17.000Z</pubTime>
         
         <tag>学吉他</tag>
          
@@ -405,12 +427,12 @@
 
     
   <url>
-    <loc>http://blog.flonger.com/2018/07/14/%E7%90%B4%E5%BA%90%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/</loc>
+    <loc>http://blog.flonger.com/2018/07/21/%E7%90%B4%E5%BA%90%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/</loc>
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     <data>
         <display>
-        <title>琴庐第一节课</title>
-        <pubTime>2018-07-14T15:44:17.000Z</pubTime>
+        <title>琴庐第二节课</title>
+        <pubTime>2018-07-21T15:45:30.000Z</pubTime>
         
         <tag>学吉他</tag>
          
