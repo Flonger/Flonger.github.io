@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://blog.flonger.com/2020/01/07/%E5%85%B3%E4%BA%8EGit%E4%B8%8A%E4%BC%A0%E7%9A%84%E6%8A%A5%E9%94%99/</loc>
+    <lastmod>2020-01-07T11:02:44.267Z</lastmod>
+    <data>
+        <display>
+        <title>关于Git上传的报错</title>
+        <pubTime>2020-01-07T11:00:05.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://blog.flonger.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.flonger.com/2019/12/18/Vue%E9%A1%B9%E7%9B%AEcommit%E6%97%B6%E7%9A%84Cli%E6%8A%A5%E9%94%99/</loc>
     <lastmod>2019-12-18T03:09:17.959Z</lastmod>
     <data>
@@ -253,12 +273,12 @@
 
     
   <url>
-    <loc>http://blog.flonger.com/2016/08/16/GCD%E5%AD%A6%E4%B9%A0%EF%BC%9Adispatch-apply/</loc>
+    <loc>http://blog.flonger.com/2016/07/23/GCD%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     <data>
         <display>
-        <title>GCD学习：dispatch_apply</title>
-        <pubTime>2016-08-16T02:54:08.000Z</pubTime>
+        <title>GCD学习:概述</title>
+        <pubTime>2016-07-23T13:40:41.000Z</pubTime>
         
         <tag>GCD</tag>
          
@@ -273,12 +293,12 @@
 
     
   <url>
-    <loc>http://blog.flonger.com/2016/07/23/GCD%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
+    <loc>http://blog.flonger.com/2016/08/16/GCD%E5%AD%A6%E4%B9%A0%EF%BC%9Adispatch-apply/</loc>
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     <data>
         <display>
-        <title>GCD学习:概述</title>
-        <pubTime>2016-07-23T13:40:41.000Z</pubTime>
+        <title>GCD学习：dispatch_apply</title>
+        <pubTime>2016-08-16T02:54:08.000Z</pubTime>
         
         <tag>GCD</tag>
          
@@ -361,18 +381,16 @@
 
     
   <url>
-    <loc>http://blog.flonger.com/2018/06/29/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E4%B8%8E%E7%AC%AC%E4%B8%89%E6%96%B9%E5%88%86%E4%BA%AB%E9%97%AE%E9%A2%98/</loc>
+    <loc>http://blog.flonger.com/2017/07/24/%E6%9C%80%E6%96%B0Facebook%E7%99%BB%E5%BD%95%E5%BC%BA%E5%88%B6%E5%94%A4%E8%B5%B7App/</loc>
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     <data>
         <display>
-        <title>微信支付与第三方分享问题</title>
-        <pubTime>2018-06-29T08:04:46.000Z</pubTime>
+        <title>最新Facebook登录强制唤起App</title>
+        <pubTime>2017-07-24T03:11:01.000Z</pubTime>
         
-        <tag>iOS</tag>
+        <tag>iOS开发</tag>
          
-        <tag>微信支付</tag>
-         
-        <tag>shareSDK</tag>
+        <tag>第三方登录</tag>
          
          
            
@@ -385,16 +403,18 @@
 
     
   <url>
-    <loc>http://blog.flonger.com/2017/07/24/%E6%9C%80%E6%96%B0Facebook%E7%99%BB%E5%BD%95%E5%BC%BA%E5%88%B6%E5%94%A4%E8%B5%B7App/</loc>
+    <loc>http://blog.flonger.com/2018/06/29/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E4%B8%8E%E7%AC%AC%E4%B8%89%E6%96%B9%E5%88%86%E4%BA%AB%E9%97%AE%E9%A2%98/</loc>
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     <data>
         <display>
-        <title>最新Facebook登录强制唤起App</title>
-        <pubTime>2017-07-24T03:11:01.000Z</pubTime>
+        <title>微信支付与第三方分享问题</title>
+        <pubTime>2018-06-29T08:04:46.000Z</pubTime>
         
-        <tag>iOS开发</tag>
+        <tag>iOS</tag>
          
-        <tag>第三方登录</tag>
+        <tag>微信支付</tag>
+         
+        <tag>shareSDK</tag>
          
          
            
