@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.flonger.com/about/index.html</loc>
+    
+    <lastmod>2020-07-30T03:10:44.784Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.flonger.com/tags/index.html</loc>
     
     <lastmod>2020-07-30T01:29:51.957Z</lastmod>
@@ -93,14 +100,14 @@
   </url>
   
   <url>
-    <loc>http://blog.flonger.com/2016/07/23/GCD%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
+    <loc>http://blog.flonger.com/2017/07/12/Ciao-Tomorrow/</loc>
     
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://blog.flonger.com/2017/07/22/ItChat%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://blog.flonger.com/2016/07/23/GCD%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
     
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     
@@ -114,14 +121,7 @@
   </url>
   
   <url>
-    <loc>http://blog.flonger.com/2016/07/23/NSString%E5%B1%9E%E6%80%A7%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E7%94%A8copy%EF%BC%8C%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E7%94%A8strong/</loc>
-    
-    <lastmod>2018-08-29T10:09:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.flonger.com/2017/07/12/Ciao-Tomorrow/</loc>
+    <loc>http://blog.flonger.com/2017/07/22/ItChat%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     
@@ -135,7 +135,7 @@
   </url>
   
   <url>
-    <loc>http://blog.flonger.com/2018/06/29/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E4%B8%8E%E7%AC%AC%E4%B8%89%E6%96%B9%E5%88%86%E4%BA%AB%E9%97%AE%E9%A2%98/</loc>
+    <loc>http://blog.flonger.com/2016/07/23/NSString%E5%B1%9E%E6%80%A7%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E7%94%A8copy%EF%BC%8C%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E7%94%A8strong/</loc>
     
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     
@@ -149,13 +149,6 @@
   </url>
   
   <url>
-    <loc>http://blog.flonger.com/2018/07/14/%E7%90%B4%E5%BA%90%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/</loc>
-    
-    <lastmod>2018-08-29T10:09:29.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.flonger.com/2018/07/21/%E7%90%B4%E5%BA%90%E7%AC%AC%E4%BA%8C%E8%8A%82%E8%AF%BE/</loc>
     
     <lastmod>2018-08-29T10:09:29.000Z</lastmod>
@@ -163,9 +156,16 @@
   </url>
   
   <url>
-    <loc>http://blog.flonger.com/about/index.html</loc>
+    <loc>http://blog.flonger.com/2018/06/29/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E4%B8%8E%E7%AC%AC%E4%B8%89%E6%96%B9%E5%88%86%E4%BA%AB%E9%97%AE%E9%A2%98/</loc>
     
-    <lastmod>2018-08-16T03:39:29.000Z</lastmod>
+    <lastmod>2018-08-29T10:09:29.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.flonger.com/2018/07/14/%E7%90%B4%E5%BA%90%E7%AC%AC%E4%B8%80%E8%8A%82%E8%AF%BE/</loc>
+    
+    <lastmod>2018-08-29T10:09:29.000Z</lastmod>
     
   </url>
   
